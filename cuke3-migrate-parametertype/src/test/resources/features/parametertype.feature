@@ -1,26 +1,21 @@
-Feature:
+Feature: Parameter Conversion for Cucumber-JVM 3
 
-  Scenario: Delimiter scenario
+  Scenario: Delimiter Annotation scenario
     Given the user names are jane,john,colin,alice
     Given the users are jane,john,colin,alice
 
-
-  Scenario: Format scenario
+  Scenario: Format Annotation scenario
     Given the date is 2017-11-05T09:54:13
 
-
-  Scenario: Transformer scenario
+  Scenario: Transformer Annotation scenario
     Given the name is 'John Mich Arthur Doe'
     Given the amount is $91.63
-    
-  
-  Scenario: XStream parameter scenario
+      
+  Scenario: Parameter scenario single arg constructor
     Given the user name is John Doe
   
-  
-  Scenario: XStream parameter scenario NO single arg cont
+  Scenario: Parameter scenario NO single arg constructor
     Given the professor is John Doe
-  
     
-  Scenario: XStream parameter scenario enum
+  Scenario: Parameter scenario enum
     Given the professor level is ASSOCIATE
