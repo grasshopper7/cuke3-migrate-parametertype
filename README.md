@@ -1,10 +1,17 @@
 XStream in Java Cucumber implementation is dead. No more trying to decide whether to extend AbstractSingleValueConverter or implement Converter.
+
 For the official announcement mentioning other goodies, wander to this link - https://cucumber.io/blog/2018/05/19/announcing-cucumber-jvm-3-0-0.
+
 For the release notes navigate to - https://github.com/cucumber/cucumber-jvm/blob/master/CHANGELOG.md and scroll down to the 3.0.0-SNAPSHOT section. In this check out point 2 where annotations like @Delimiter, @Format, @Transformer,@XStreamConverter, @XStreamConverters are laid to rest. These must be replaced by a DataTableType or ParameterType.
+
 For details on Cucumber Expressions which have been introduced to work alongside Regular Expressions refer to this - https://docs.cucumber.io/cucumber/cucumber-expressions/
+
 Source Code – Have tried to add the relevant code portions in the article. For bigger source code will point to the relevant link.
+
 Refer to [cuke2-parameter-datatable](https://github.com/grasshopper7/cuke2-parameter-datatable) link for Cucumber 2. Scenarios are contained in [parameter.feature](https://github.com/grasshopper7/cuke2-parameter-datatable/blob/master/cuke2-parameter-datatable/src/test/resources/features/parameter.feature). Step Definition in [ParameterStepDefinition.java](https://github.com/grasshopper7/cuke2-parameter-datatable/blob/master/cuke2-parameter-datatable/src/test/java/stepdef/ParameterStepDefinition.java). 
+
 Refer to cuke3-migrate-parametertype link for Cucumber 3. Scenarios are contained in parametertype.feature. Step Definition code in ParameterTypeStepDefinition.java. Parameter registration code in Configurer.java.
+
 What is ParameterType? - This contains all the mapping details and the transformation code for converting a string variable into a desired object.
 Let us look at Cucumber 2 code –
 Given the user name is John Doe  
