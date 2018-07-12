@@ -133,14 +133,14 @@ Migrating from Transformer annotation - Have a look at the first example of conv
 
 What happens when we do not have a single argument constructor or we do not have access to it? The way out is to use the Transformer annotation in the stepdefinition method.
 
+Refer to [FullNameTransformer](https://github.com/grasshopper7/cuke2-parameter-datatable/blob/master/cuke2-parameter-datatable/src/test/java/transformer/FullNameTransformer.java) and [FullName](https://github.com/grasshopper7/cuke2-parameter-datatable/blob/master/cuke2-parameter-datatable/src/test/java/dataobject/FullName.java) dataobject for relevant code.
+
 	Given the name is 'John Mich Arthur Doe'
 
 	@Given("^the name is (.*?)$")
 	public void theAmountIs(@Transform(FullNameTransformer.class) FullName name) {
 		System.out.println(name); //Get this output - FullName [firstName=John, title=Doe, middleName=Mich Arthur]
 	}
-	
-	Refer to [FullNameTransformer](https://github.com/grasshopper7/cuke2-parameter-datatable/blob/master/cuke2-parameter-datatable/src/test/java/transformer/FullNameTransformer.java) and [FullName](https://github.com/grasshopper7/cuke2-parameter-datatable/blob/master/cuke2-parameter-datatable/src/test/java/dataobject/FullName.java) dataobject
 
 In Cucumber 3, we just need to declare a ParameterType to hold this logic of converting string to a FullName object. The parsing and object creation code that was in the transformer moves to the ParameterType constructor. Or even move it to a class and refer to it by method reference.
 
