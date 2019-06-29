@@ -14,13 +14,13 @@ public class ParameterTypeStepDefinition {
 
 	//---DELMITER
 	@Given("the user names are {names}")
-	public void givenUser(List<String> names) {
+	public void givenNames(List<String> names) {
 		System.out.println(names);
 		System.out.println("");
 	}
 
 	@Given("the users are {users}")
-	public void givenProf(List<User> names) {
+	public void givenUsers(List<User> names) {
 		System.out.println(names);
 		System.out.println("");
 	}
